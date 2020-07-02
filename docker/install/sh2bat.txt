@@ -1,0 +1,19 @@
+#正则替换（不同的编辑器，替换串中的$number可能需要改为\number）
+"SYSTEM=`uname -s`" "set drive=%cd:~0,2%"
+"/" "\\"
+#注意：下一行需要执行多次，直到没有匹配为止
+"(-v +(?:[\\.]\S+)+:)([^ \\]*)\\([^ ]+)" "$1$2/$3"
+" -v \\" " -v %drive%\\"
+" (\S+)\\(\S+)(:[\d\.]+)$" " $1/$2$3"
+#注意：下一行需要执行多次，直到没有匹配为止
+"^\s*(docker[^\n]+) +([^\s]*)\\([^\\\s]+)*$" "$1 $2/$3"
+"^if[\s\S]+?else\s*([\s\S]+?)fi\n" "$1"
+"-v */var/run/docker.sock" "-v //./pipe/docker_engine"
+"^(\\)*cp(\s+-f)* " "copy "
+"^rm -rf " "rd /q /s "
+"^mkdir( -p)* " "md "
+"^unzip (\S+) -d (\S+)" "7z x -aoa $1 -o$2"
+"^read -p '按任意键开始' -n 1" "pause"
+"^read -p '(.+)' -t (\d+)" "choice /C YNC /CS /D Y /N  /M '$1'  /T $2"
+"^echo" "rem"
+"^#" "rem "

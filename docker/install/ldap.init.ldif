@@ -1,0 +1,45 @@
+dn:dc=dev,dc=easymeans,dc=cn
+objectclass:dcObject
+objectclass:organization
+o:Development
+
+dn: dc=users,dc=dev,dc=easymeans,dc=cn
+objectclass:dcObject
+objectclass:organization
+o:users
+
+dn: uid=admin,dc=users,dc=dev,dc=easymeans,dc=cn
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+userPassword: {md5}xMpCOKC5I4INzFCab3WEmw==
+sn: admin
+cn: admin
+
+dn: uid=admin-c,dc=users,dc=dev,dc=easymeans,dc=cn
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+userPassword: {md5}xMpCOKC5I4INzFCab3WEmw==
+sn: admin-c
+cn: admin-c
+
+dn: uid=admin-s,dc=users,dc=dev,dc=easymeans,dc=cn
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+userPassword: {md5}xMpCOKC5I4INzFCab3WEmw==
+sn: admin-s
+cn: admin-s
+
+dn: uid=admin-a,dc=users,dc=dev,dc=easymeans,dc=cn
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+userPassword: {md5}xMpCOKC5I4INzFCab3WEmw==
+sn: admin-a
+cn: admin-a
